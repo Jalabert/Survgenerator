@@ -7,7 +7,9 @@ bot.on('ready', function () {
 });
 
 bot.on("message", function(message) {
-    message.channel.send('My Message')
+    if (message.content === 'spam') {
+        message.channel.send('My Message')
+    }
 });
 
 bot.login(process.env.TOKEN);
