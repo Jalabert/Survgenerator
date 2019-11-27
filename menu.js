@@ -25,7 +25,7 @@ bot.on("message", function(message) {
         message.channel.send("Tout d'abord, voici le cast:")
         ncast = getRandomInt(10,20)
         await sleep(3000)
-         message.channel.send("Le cast sera compose de", ncast, "personnes.")
+        message.channel.send("Le cast sera compose de", ncast, "personnes.")
        }
 });
 
