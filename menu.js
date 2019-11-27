@@ -30,3 +30,5 @@ bot.on("message", function(message) {
         }, 3000);
        }
 });
+
+bot.login(process.env.TOKEN);
