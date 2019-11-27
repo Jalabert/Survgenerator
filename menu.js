@@ -12,15 +12,24 @@ bot.on("message", function(message) {
     }
 });
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
 bot.on("message", function(message) {
     if (message.content === '!nouvellesaison') {
         message.channel.send('Une nouvelle saison(epique) va bientot commencer.')
         setTimeout(function(){
-            message.channel.send('Suite')
+            message.channel.send("Tout d'abord, voici le cast:")
+            ncast = getRandomInt(10,20)
+            setTimeout(function(){
+                message.channel.send("Le cast sera compose de", ncast, "personnes.")
+            }, 3000);
          }, 3000);
        }
 });
 
 bot.login(process.env.TOKEN);
-
 
