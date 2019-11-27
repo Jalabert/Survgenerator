@@ -15,8 +15,12 @@ bot.on("message", function(message) {
 bot.on("message", function(message) {
     if (message.content === '!nouvellesaison') {
         message.channel.send('Une nouvelle saison(epique) va bientot commencer.')
-    }
+        setTimeout(function(){
+            message.channel.send('Suite')
+         }, 3000);
+       }
 });
 
 bot.login(process.env.TOKEN);
+
 
