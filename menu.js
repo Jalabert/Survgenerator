@@ -21,13 +21,11 @@ function getRandomInt(min, max) {
 bot.on("message", function(message) {
     if (message.content === '!nouvellesaison') {
         message.channel.send('Une nouvelle saison(epique) va bientot commencer.')
-        setTimeout(function(){
-            message.channel.send("Tout d'abord, voici le cast:")
-        }, 3000);
+        await sleep(3000)
+        message.channel.send("Tout d'abord, voici le cast:")
         ncast = getRandomInt(10,20)
-        setTimeout(function(){
-            message.channel.send("Le cast sera compose de", ncast, "personnes.")
-        }, 3000);
+        await sleep(3000)
+         message.channel.send("Le cast sera compose de", ncast, "personnes.")
        }
 });
 
