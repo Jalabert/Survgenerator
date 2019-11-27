@@ -12,5 +12,11 @@ bot.on("message", function(message) {
     }
 });
 
+bot.on("message", function(message) {
+    if (message.content === '!nouvellesaison') {
+        message.channel.send('Une nouvelle saison(epique) va bientot commencer.')
+    }
+});
+
 bot.login(process.env.TOKEN);
 
