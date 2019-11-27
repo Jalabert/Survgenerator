@@ -23,13 +23,10 @@ bot.on("message", function(message) {
         message.channel.send('Une nouvelle saison(epique) va bientot commencer.')
         setTimeout(function(){
             message.channel.send("Tout d'abord, voici le cast:")
-            ncast = getRandomInt(10,20)
-            setTimeout(function(){
-                message.channel.send("Le cast sera compose de", ncast, "personnes.")
-            }, 3000);
-         }, 3000);
+        }, 3000);
+        ncast = getRandomInt(10,20)
+        setTimeout(function(){
+            message.channel.send("Le cast sera compose de", ncast, "personnes.")
+        }, 3000);
        }
 });
-
-bot.login(process.env.TOKEN);
-
